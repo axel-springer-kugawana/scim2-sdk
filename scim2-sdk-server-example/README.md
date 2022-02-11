@@ -36,7 +36,7 @@ Check **pom.xml** for dependencies.
 
 ```
 <dependency>
-    <groupId>dev.suvera.scim2</groupId>
+    <groupId>dev.axelspringerkugawana.scim2</groupId>
     <artifactId>scim2-sdk-server</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 </dependency>
@@ -47,10 +47,10 @@ Check **service** package for sample implementations.
 
 Your Spring Boot application has to implement these basic services.
 
-and also append **"dev.suvera.scim2.server"** package to **scanBasePackages** config option of SpringBootApplication like below.
+and also append **"dev.axelspringerkugawana.scim2.server"** package to **scanBasePackages** config option of SpringBootApplication like below.
 
 ```
-@SpringBootApplication(scanBasePackages = {"dev.suvera.scim2.server", "dev.suvera.scim2.example.server"})
+@SpringBootApplication(scanBasePackages = {"dev.axelspringerkugawana.scim2.server", "dev.axelspringerkugawana.scim2.example.server"})
 
 ```
 

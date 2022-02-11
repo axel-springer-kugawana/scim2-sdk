@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>dev.suvera.scim2</groupId>
+    <groupId>dev.axelspringerkugawana.scim2</groupId>
     <artifactId>scim2-sdk-server-example</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <name>scim2-sdk-server-example</name>
@@ -23,7 +23,7 @@
     <dependencies>
 
         <dependency>
-            <groupId>dev.suvera.scim2</groupId>
+            <groupId>dev.axelspringerkugawana.scim2</groupId>
             <artifactId>scim2-sdk-server</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>

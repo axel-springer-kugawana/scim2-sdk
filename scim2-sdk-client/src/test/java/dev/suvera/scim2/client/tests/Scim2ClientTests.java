@@ -1,4 +1,4 @@
-package dev.suvera.scim2.client.tests;
+package dev.axelspringerkugawana.scim2.client.tests;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.HttpUrl;

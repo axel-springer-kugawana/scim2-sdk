@@ -1,16 +1,16 @@
-package dev.suvera.scim2.client.tests;
+package dev.axelspringerkugawana.scim2.client.tests;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.javafaker.Address;
 import com.github.javafaker.Faker;
 import com.github.javafaker.Name;
 import com.github.javafaker.PhoneNumber;
-import dev.suvera.scim2.schema.data.Attribute;
-import dev.suvera.scim2.schema.data.resource.ResourceType;
-import dev.suvera.scim2.schema.data.schema.Schema;
-import dev.suvera.scim2.schema.data.schema.SchemaExtension;
-import dev.suvera.scim2.schema.data.user.UserRecord;
-import dev.suvera.scim2.schema.util.Xmap;
+import dev.axelspringerkugawana.scim2.schema.data.Attribute;
+import dev.axelspringerkugawana.scim2.schema.data.resource.ResourceType;
+import dev.axelspringerkugawana.scim2.schema.data.schema.Schema;
+import dev.axelspringerkugawana.scim2.schema.data.schema.SchemaExtension;
+import dev.axelspringerkugawana.scim2.schema.data.user.UserRecord;
+import dev.axelspringerkugawana.scim2.schema.util.Xmap;
 import org.apache.commons.collections4.IterableUtils;
 
 import java.util.*;
