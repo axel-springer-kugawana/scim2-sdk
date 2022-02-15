@@ -167,7 +167,7 @@ public class Scim2Protocol {
 
             listResponse = objectMapper.readValue(response.getBody(), type);
         } catch (JsonProcessingException e) {
-            throw new ScimException("Could not parse response for " + resource, e);
+            throw new ScimException("Could not parse response for " + resource + " " + response.getBody(), e);
         }
 
         verifySchemasInResponse(
@@ -445,7 +445,7 @@ public class Scim2Protocol {
         try {
             bulkResponse = objectMapper.readValue(response.getBody(), BulkResponse.class);
         } catch (JsonProcessingException e) {
-            throw new ScimException("Could not parse response for " + resource, e);
+            throw new ScimException("Could not parse response for " + resource + "  "  +response.getBody(), e);
         }
 
         verifySchemasInResponse(

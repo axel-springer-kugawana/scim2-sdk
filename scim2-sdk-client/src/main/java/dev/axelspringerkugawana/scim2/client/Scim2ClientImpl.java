@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JavaType;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import dev.axelspringerkugawana.scim2.schema.ScimConstant;
 import dev.axelspringerkugawana.scim2.schema.data.BaseRecord;
 import dev.axelspringerkugawana.scim2.schema.data.ScimResponse;
@@ -459,13 +458,14 @@ public class Scim2ClientImpl implements Scim2Client {
     public static boolean isValidJSONObject(final String json) {
         boolean valid = true;
         JsonNode jsonNode = null;
-        ObjectNode objectNode = null;
         try {
             objectMapper.enable(DeserializationFeature.FAIL_ON_TRAILING_TOKENS);
             objectMapper.enable(DeserializationFeature.FAIL_ON_READING_DUP_TREE_KEY);
             jsonNode = objectMapper.readTree(json);
-            // cast to ObjectNode to ensure the JSON received is a valid JSON object
-            objectNode = jsonNode.deepCopy();
+            if (!jsonNode.isObject()) {
+                log.error("Input is not a valid object structure");
+                valid = false;
+            }
         } catch(JsonProcessingException e) {
             log.error("Json Processing error ", e);
             valid = false;
