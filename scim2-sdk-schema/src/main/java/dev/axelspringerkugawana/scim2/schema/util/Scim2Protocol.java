@@ -350,7 +350,7 @@ public class Scim2Protocol {
             throw new ScimException("Unexpected http code received "
                     + response.getCode()
                     + " while creating a resource of type " + resourceType.getName()
-                    + " expected value is one of [201]"
+                    + " expected value is one of [201]" + response.getBody().toString()
                     , buildErrorBody(response.getBody()));
         }
 
